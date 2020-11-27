@@ -1,0 +1,392 @@
+/**
+ * 마징가
+ */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class Mazingga extends JPanel{
+    public Mazingga()
+    {  
+    }
+    public void paintComponent(Graphics g)
+    {
+        super.paintComponent(g);
+        
+        Polygon face1 = new Polygon();
+        face1.addPoint(300, 430);
+        face1.addPoint(300, 490);
+        face1.addPoint(410, 580);
+        face1.addPoint(380, 500); 
+
+        Polygon face2 = new Polygon();
+        face2.addPoint(410, 580);
+        face2.addPoint(380, 500);
+        face2.addPoint(475, 500);
+        face2.addPoint(465, 580);
+
+        Polygon face3 = new Polygon();
+        face3.addPoint(590, 580);
+        face3.addPoint(620, 500);
+        face3.addPoint(525, 500);
+        face3.addPoint(535, 580);       
+
+        Polygon face4 = new Polygon();
+        face4.addPoint(700, 430);
+        face4.addPoint(700, 490);
+        face4.addPoint(590, 580);
+        face4.addPoint(620, 500);       
+        
+
+        Polygon nose = new Polygon();
+        nose.addPoint(535, 580);
+        nose.addPoint(465, 580);
+        nose.addPoint(476, 480);
+        nose.addPoint(524, 480);
+
+        g.setColor(new Color(92,31,184)); 
+        g.fillPolygon(face1);
+        g.fillPolygon(face4);
+        g.setColor(new Color(97,46,199)); 
+        g.fillPolygon(face2);
+        g.fillPolygon(face3);
+        g.setColor(new Color(102,51,204)); 
+        g.fillPolygon(nose);
+
+        g.setColor(Color.BLACK);
+        g.drawPolygon(face1);
+        g.drawPolygon(face2);
+        g.drawPolygon(face3);
+        g.drawPolygon(face4);
+        g.drawPolygon(nose);
+
+        Polygon eye1 = new Polygon();
+        eye1.addPoint(300, 430);
+        eye1.addPoint(380, 500);
+        eye1.addPoint(460, 500);
+        eye1.addPoint(472, 515);
+        eye1.addPoint(478, 465);
+        eye1.addPoint(430, 440);
+        g.fillPolygon(eye1);
+
+        Polygon eye2 = new Polygon();
+        eye2.addPoint(700, 430);
+        eye2.addPoint(620, 500);
+        eye2.addPoint(540, 500);
+        eye2.addPoint(527, 515);
+        eye2.addPoint(522, 465);
+        eye2.addPoint(569, 440);
+        g.fillPolygon(eye2);
+
+        Polygon eye3 = new Polygon();
+        eye3.addPoint(476, 480);
+        eye3.addPoint(524, 480);
+        eye3.addPoint(523, 465);
+        eye3.addPoint(476, 465);
+        g.fillPolygon(eye3);
+
+        g.setColor(new Color(255,255,0));
+
+        Polygon eye4 = new Polygon();
+        eye4.addPoint(335, 443);
+        eye4.addPoint(430, 450);
+        eye4.addPoint(465, 471);
+        eye4.addPoint(450, 490);
+        eye4.addPoint(395, 490);
+        g.fillPolygon(eye4);
+
+        Polygon eye5 = new Polygon();
+        eye5.addPoint(665, 443);
+        eye5.addPoint(570, 450);
+        eye5.addPoint(535, 471);
+        eye5.addPoint(550, 490);
+        eye5.addPoint(605, 490);
+        g.fillPolygon(eye5);
+
+        g.setColor(Color.BLACK);
+
+        Polygon mouth1 = new Polygon();
+        mouth1.addPoint(285,485);
+        mouth1.addPoint(295,555);
+        mouth1.addPoint(425,700);
+        mouth1.addPoint(415,595);
+
+        Polygon mouth2 = new Polygon();
+        mouth2.addPoint(425,700);
+        mouth2.addPoint(415,595);
+        mouth2.addPoint(585,595);
+        mouth2.addPoint(575,700);
+        
+        Polygon mouth3 = new Polygon();
+        mouth3.addPoint(575,700);
+        mouth3.addPoint(585,595);
+        mouth3.addPoint(715,485);
+        mouth3.addPoint(705,555);
+        
+        Polygon mouth = new Polygon();
+        mouth.addPoint(300,430);
+        mouth.addPoint(285,430);
+        mouth.addPoint(285,485);
+        mouth.addPoint(415,595);
+        mouth.addPoint(585,595);
+        mouth.addPoint(715,485);
+        mouth.addPoint(715,430);
+        mouth.addPoint(700,430);
+        mouth.addPoint(700,490);
+        mouth.addPoint(590,580);
+        mouth.addPoint(410,580);
+        mouth.addPoint(300, 490);
+        
+        g.setColor(new Color(150,150,150));
+        g.fillPolygon(mouth1);
+        g.fillPolygon(mouth3);
+        g.setColor(new Color(180,180,180));
+        g.fillPolygon(mouth2);
+        g.fillPolygon(mouth);
+
+        g.setColor(Color.BLACK);
+        g.drawPolygon(mouth1);
+        g.drawPolygon(mouth2);
+        g.drawPolygon(mouth3);
+        g.drawPolygon(mouth);
+
+        Polygon hole1 = new Polygon();
+        hole1.addPoint(440,610);
+        hole1.addPoint(470,610);
+        hole1.addPoint(472,685);
+        hole1.addPoint(445,685);
+        
+        Polygon hole2 = new Polygon();
+        hole2.addPoint(488,610);
+        hole2.addPoint(518,610);
+        hole2.addPoint(513,685);
+        hole2.addPoint(493,685);
+        
+        Polygon hole3 = new Polygon();
+        hole3.addPoint(536,610);
+        hole3.addPoint(563,610);
+        hole3.addPoint(558,685);
+        hole3.addPoint(533,685);
+        
+        Polygon hole4 = new Polygon();
+        hole4.addPoint(400,598);
+        hole4.addPoint(380,581);
+        hole4.addPoint(387,642);
+        hole4.addPoint(408,668);
+        
+        Polygon hole5 = new Polygon();
+        hole5.addPoint(370,570);
+        hole5.addPoint(350,553);
+        hole5.addPoint(355,607);
+        hole5.addPoint(375,630);
+        
+        Polygon hole6 = new Polygon();
+        hole6.addPoint(340,542);
+        hole6.addPoint(320,525);
+        hole6.addPoint(325,577);
+        hole6.addPoint(345,595);
+        
+        Polygon hole7 = new Polygon();
+        hole7.addPoint(600,598);
+        hole7.addPoint(620,581);
+        hole7.addPoint(615,642);
+        hole7.addPoint(592,668);
+        
+        Polygon hole8 = new Polygon();
+        hole8.addPoint(630,570);
+        hole8.addPoint(650,553);
+        hole8.addPoint(645,607);
+        hole8.addPoint(625,630);
+        
+        Polygon hole9 = new Polygon();
+        hole9.addPoint(660,542);
+        hole9.addPoint(680,525);
+        hole9.addPoint(675,577);
+        hole9.addPoint(655,595);
+        
+        g.setColor(new Color(100,100,100));
+        g.fillPolygon(hole1);
+        g.fillPolygon(hole2);
+        g.fillPolygon(hole3);
+        g.fillPolygon(hole4);
+        g.fillPolygon(hole5);
+        g.fillPolygon(hole6);
+        g.fillPolygon(hole7);
+        g.fillPolygon(hole8);
+        g.fillPolygon(hole9);
+
+        g.setColor(Color.BLACK);
+        g.drawPolygon(hole1);
+        g.drawPolygon(hole2);
+        g.drawPolygon(hole3);
+        g.drawPolygon(hole4);
+        g.drawPolygon(hole5);
+        g.drawPolygon(hole6);
+        g.drawPolygon(hole7);
+        g.drawPolygon(hole8);
+        g.drawPolygon(hole9);
+
+        Polygon horn_root1 = new Polygon();
+        horn_root1.addPoint(285,430);
+        horn_root1.addPoint(270,440);
+        horn_root1.addPoint(273,520);
+        horn_root1.addPoint(291,528);
+        horn_root1.addPoint(285,485);
+        
+        Polygon horn_root2 = new Polygon();
+        horn_root2.addPoint(715,430);
+        horn_root2.addPoint(730,440);
+        horn_root2.addPoint(727,520);
+        horn_root2.addPoint(709,528);
+        horn_root2.addPoint(715,485);
+
+        g.setColor(new Color(140,140,140));
+        g.fillPolygon(horn_root1);
+        g.fillPolygon(horn_root2);
+
+        g.setColor(Color.BLACK);
+        g.drawPolygon(horn_root1);
+        g.drawPolygon(horn_root2);
+
+        Polygon horn1 = new Polygon();
+        horn1.addPoint(270,440);
+        horn1.addPoint(60,480);
+        horn1.addPoint(273,520);
+
+        Polygon horn2 = new Polygon();
+        horn2.addPoint(730,440);
+        horn2.addPoint(940,480);
+        horn2.addPoint(727,520);
+
+        g.setColor(new Color(230,230,051));
+        g.fillPolygon(horn1);
+        g.fillPolygon(horn2);
+
+        g.setColor(Color.BLACK);
+        g.drawPolygon(horn1);
+        g.drawPolygon(horn2);
+
+        Polygon head_horn = new Polygon();
+        head_horn.addPoint(460,225);
+        head_horn.addPoint(500,30);
+        head_horn.addPoint(540,225);
+
+        g.setColor(new Color(153,0,0));
+        g.fillPolygon(head_horn);
+        g.setColor(new Color(174,174,255));
+        g.fillArc(395, 212, 210, 220, 0, 360);
+        g.setColor(Color.BLACK);
+        g.drawLine(460,222, 500,30);
+        g.drawLine(540,222, 500,30);
+        g.drawArc(395, 212, 210, 220, 0, 360);
+
+        g.setColor(Color.BLACK);
+
+        Polygon Headgear1 = new Polygon();
+        Headgear1.addPoint(285,430);
+        Headgear1.addPoint(300,430);
+        Headgear1.addPoint(430,440);
+        Headgear1.addPoint(430,340);
+        for(int i = 1; i<6;i++)
+        {
+            Headgear1.addPoint(430-12*i,340-2*i*i);
+        }
+        Headgear1.addPoint(355,150);
+        for(int i = 1;i<7;i++)
+        {
+            if(i<=5)
+            {
+                Headgear1.addPoint(355-3*i*i,150-5*i);
+            }
+            else
+            {
+                Headgear1.addPoint(355-5*i*i,120+i);
+            }
+        }
+        Headgear1.addPoint(180,330);
+        
+
+        Polygon Headgear2 = new Polygon();
+        Headgear2.addPoint(715,430);
+        Headgear2.addPoint(700,430);
+        Headgear2.addPoint(569,440);
+        Headgear2.addPoint(569,340);
+        for(int i = 1; i<6;i++)
+        {
+            Headgear2.addPoint(569+12*i,340-2*i*i);
+        }
+        Headgear2.addPoint(644,150);
+        for(int i = 1;i<7;i++)
+        {
+            if(i<=5)
+            {
+                Headgear2.addPoint(644+3*i*i,150-5*i);
+            }
+            else
+            {
+                Headgear2.addPoint(644+5*i*i,120+i);
+            }
+        }
+        Headgear2.addPoint(819,330);
+
+        g.setColor(new Color(164,164,164));
+        g.fillPolygon(Headgear1);
+        g.fillPolygon(Headgear2);
+
+        g.setColor(Color.BLACK);
+        g.drawPolygon(Headgear1);
+        g.drawPolygon(Headgear2);
+
+        Polygon innerHeadgear1 = new Polygon();
+        innerHeadgear1.addPoint(569,345);
+        innerHeadgear1.addPoint(430,345);
+        innerHeadgear1.addPoint(430,375);
+        innerHeadgear1.addPoint(569,375);
+
+        Polygon innerHeadgear2 = new Polygon();
+        innerHeadgear2.addPoint(430,375);
+        innerHeadgear2.addPoint(569,375);
+        innerHeadgear2.addPoint(569, 440);
+        innerHeadgear2.addPoint(522, 465);
+        innerHeadgear2.addPoint(478, 465);
+        innerHeadgear2.addPoint(430, 440);
+
+        g.setColor(new Color(174,0,0));
+        g.fillPolygon(innerHeadgear1);
+        g.setColor(new Color(153,0,0));
+        g.fillPolygon(innerHeadgear2);
+
+        g.setColor(Color.BLACK);
+        g.drawPolygon(innerHeadgear1);
+        g.drawPolygon(innerHeadgear2);
+
+        Font font = new Font("맑은 고딕",Font.BOLD,20);
+        g.setFont(font);
+        g.drawString("컴퓨터 소프트웨어학부 20161611 김시현입니다.", 300, 800);
+    }
+}
+
+class draw extends JFrame{
+    public draw()
+    {
+        setTitle("마징가 그리기");
+        setSize(1000,1000);
+        setLocation(200,30);
+        addWindowListener(new WindowAdapter()
+        {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(0);
+            }
+        });
+        Container contentPane = getContentPane();
+        contentPane.add(new Mazingga());
+    }
+}
+
+public class 마징가 {
+    public static void main(String[] args) {
+        JFrame frame = new draw();
+        frame.setVisible(true);
+    }
+}
